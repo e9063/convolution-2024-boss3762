@@ -29,10 +29,10 @@ int main(){
             sum += A[i+j]*F[NF - j - 1];
         }
         R[i] = sum;
-        #pragma omp critical
-        {
-            printf("%d\n", sum);
-        }
+    }
+    
+    for(int i = 0; i < NA - NF + 1; i++){
+        printf("%d\n", R[i]);
     }
 
     // ---- free memory ----
